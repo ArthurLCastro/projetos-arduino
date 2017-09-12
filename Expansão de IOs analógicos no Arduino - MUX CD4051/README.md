@@ -1,0 +1,2 @@
+# Expansão de I/Os analógicos no Arduino - MUX CD4051
+Em determinados projetos necessita-se de uma quantidade maior de portas analógicas do que as disponíveis. E é possível que mudar para um Arduino com maior capacidade (Arduino Mega, por exemplo) esteja fora de cogitação. Neste caso, este pequeno projeto pode ser útil, pois mostra como é possível expandir o número de portas analógicas do Arduino utilizando o circuito integrado Multiplexador CD4051.
