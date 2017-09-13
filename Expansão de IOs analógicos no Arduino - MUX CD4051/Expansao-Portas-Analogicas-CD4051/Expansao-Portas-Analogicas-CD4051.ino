@@ -91,6 +91,9 @@ int analogReadMUX(int AX){
       digitalWrite(pinB, 1);
       digitalWrite(pinA, 1);
       break;
+    default:
+      Serial.println("Escolha um valor entre 0 e 7");
+      break;
   }
   
 // ---------- Leitura Analógica do Pino do MUX ----------
