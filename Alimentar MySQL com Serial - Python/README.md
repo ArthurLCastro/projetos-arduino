@@ -24,9 +24,9 @@ A maneira encontrada foi utilizar um código em Arduino para ler estes sensores 
 	3. Alimentação da Base de Dados
 	4. Uso do Split
 
-## Procedimento:
+## Procedimentos:
 
-### Passo 1: Montagem e Programação do Arduino
+### Passo 1: Montagem e Programação do *Arduino*
 
 * Montagem do Hardware
 
@@ -34,6 +34,15 @@ A maneira encontrada foi utilizar um código em Arduino para ler estes sensores 
 
 * Programação do Arduino
 
+### Passo 2: Criação da Base de Dados e Tabela *MySQL*
+
+* Criação da Base e Dados:
+
+* Criação da Tabela:
+
+### Passo 3: Criação de Scripts em *Python*
+
+### Efetuando o procedimento para diversos Sensores simultaneamente
 
 ## Referências:
 [Arduino e Banco de Dados – Comunicação Serial](http://josecintra.com/blog/arduino-banco-dados-comunicacao-serial/)
