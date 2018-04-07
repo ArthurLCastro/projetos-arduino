@@ -29,10 +29,16 @@ A maneira encontrada foi utilizar um código em Arduino para ler estes sensores 
 ### Passo 1: Montagem e Programação do *Arduino*
 
 * Montagem do Hardware
+1. Arduino UNO
+2. 1 Resistor de 10Kohms
+3. 1 LDR
+4. Protoboard
+5. Jumpers
 
 ![Hardware - Arduino e Sensores](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Arduino_ftdi_chip-1.jpg/200px-Arduino_ftdi_chip-1.jpg)
 
 * Programação do Arduino
+Faça Upload do programa [Luminosidade-Serial](http://josecintra.com/blog/arduino-banco-dados-comunicacao-serial/) para o Arduino
 
 ### Passo 2: Criação da Base de Dados e Tabela *MySQL*
 
