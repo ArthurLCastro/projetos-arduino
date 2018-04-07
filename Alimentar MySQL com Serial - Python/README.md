@@ -45,9 +45,20 @@ A maneira encontrada foi utilizar um código em Arduino para ler estes sensores 
 
 ### Passo 2: Criação da Base de Dados e Tabela *MySQL*
 
-* Criação da Base e Dados:
+Para a demonstração deste projeto foi utilizado o seguinte login para o MySQL:
+**Usuário:** root
+**Senha:** root
+
+* Criação da Base de Dados:
+
+Para a criação da base de dados:
+`mysql> CREATE DATABASE Monitoramento;`
+
+Para selecionar a base de dados criada:
+`mysql> USE Monitoramento;`
 
 * Criação da Tabela:
+Para a criação da tabela pode-se digitar o comando diretamente no terminal ou executar o script [script_tabela.sql](www.google.com)
 
 ### Passo 3: Criação de Scripts em *Python*
 
