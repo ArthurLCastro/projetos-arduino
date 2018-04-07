@@ -35,7 +35,7 @@ A maneira encontrada foi utilizar um código em Arduino para ler estes sensores 
 4. Protoboard
 5. Jumpers
 
-![Hardware - Arduino e Sensores](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Arduino_ftdi_chip-1.jpg/200px-Arduino_ftdi_chip-1.jpg)
+![Montagem do Hardware - Arduino e LDR](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Montagem%20do%20Hardware.png)
 
 * Programação do Arduino
 Faça Upload do programa [Luminosidade-Serial](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Luminosidade-Serial/Luminosidade-Serial.ino) para o Arduino
