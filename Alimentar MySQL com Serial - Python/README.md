@@ -104,11 +104,14 @@ ImportError: No module named serial
 `
 seria melhor reinstalar a biblioteca.
 O mesmo serve para
+
 `>>> import mysql.connector`
 
 * Execução do script:
 
-Para que se inicie a leitura, comunicação e alimentaço dos sensores com o banco de dados, é necessário apenas executar o script 
+Para que se inicie a leitura, comunicação e alimentação dos sensores com o banco de dados, é necessário modificar a linha 8 do script [Alimentar-MySQL-com-Serial.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial.py) para a porta serial que o arduino está conectado
+
+`ser = serial.Serial('/dev/ttyACM0', 9600) `
 
 ### Efetuando o procedimento para diversos Sensores simultaneamente
 
