@@ -52,13 +52,24 @@ Para a demonstração deste projeto foi utilizado o seguinte login para o MySQL:
 * Criação da Base de Dados:
 
 Para a criação da base de dados:
+
 `mysql> CREATE DATABASE Monitoramento;`
 
 Para selecionar a base de dados criada:
+
 `mysql> USE Monitoramento;`
 
 * Criação da Tabela:
-Para a criação da tabela pode-se digitar o comando diretamente no terminal ou executar o script [script_tabela.sql](www.google.com)
+
+Para a criação da tabela pode-se digitar o comando diretamente no terminal ou executar o script [script_tabela.sql](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/script_tabela.sql)
+
+* Verificação:
+
+Construímos então o **database** "Monitoramento" que contém uma **tabela** "ARDUINO_001" com três colunas: ID, TIMESTAMP e LUMINOSIDADE(%).
+
+Para verificar, podemos executar o comando:
+
+`mysql> DESC ARDUINO_001`
 
 ### Passo 3: Criação de Scripts em *Python*
 
