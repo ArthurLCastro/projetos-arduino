@@ -63,19 +63,58 @@ Para selecionar a base de dados criada:
 
 Para a criação da tabela pode-se digitar o comando diretamente no terminal ou executar o script [script_tabela.sql](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/script_tabela.sql)
 
+`mysql> SOURCE /local-em-que-o-script-esta-salvo/script_tabela.sql;`
+
 * Verificação:
 
 Construímos então o **database** "Monitoramento" que contém uma **tabela** "ARDUINO_001" com três colunas: ID, TIMESTAMP e LUMINOSIDADE(%).
 
 Para verificar, podemos executar o comando:
 
-`mysql> DESC ARDUINO_001`
+`mysql> DESC ARDUINO_001;`
 
-### Passo 3: Criação de Scripts em *Python*
+### Passo 3: Scripts em *Python*
+
+Para que o Python leia a Serial e comunique-se com o MySQL, duas bibliotecas precisam ser instaladas: **pySerial** (usando o python pip) e **[MySQL - Connector/Python](https://dev.mysql.com/downloads/connector/python/)** (clicando no link)
+
+* Testes antes da execução do script
+
+Após instalar as bibliotecas pode-se testar no **Interpretador Python**
+
+`Python 2.7.12 (default, Dec  4 2017, 14:50:18) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>>`
+
+executando, por exemplo:
+
+`>>> import serial`
+
+se aparecer
+
+`>>> import serial
+>>>`
+
+tudo deve estar funcionando bem, mas caso apareça algum erro como:
+
+`>>> import serial
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named serial
+`
+seria melhor reinstalar a biblioteca.
+O mesmo serve para
+`>>> import mysql.connector`
+
+* Execução do script:
+
+Para que se inicie a leitura, comunicação e alimentaço dos sensores com o banco de dados, é necessário apenas executar o script 
 
 ### Efetuando o procedimento para diversos Sensores simultaneamente
 
 ## Referências:
 [Arduino e Banco de Dados – Comunicação Serial](http://josecintra.com/blog/arduino-banco-dados-comunicacao-serial/)
+
+[pySerial](http://pyserial.readthedocs.io/en/latest/pyserial.html)
 
 [How to Connect to MySQL Database from Python With Example](https://www.thegeekstuff.com/2016/06/mysql-connector-python/)
