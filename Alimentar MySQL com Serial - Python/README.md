@@ -38,7 +38,7 @@ A maneira encontrada foi utilizar um código em Arduino para ler estes sensores 
 ![Hardware - Arduino e Sensores](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Arduino_ftdi_chip-1.jpg/200px-Arduino_ftdi_chip-1.jpg)
 
 * Programação do Arduino
-Faça Upload do programa [Luminosidade-Serial](http://josecintra.com/blog/arduino-banco-dados-comunicacao-serial/) para o Arduino
+Faça Upload do programa [Luminosidade-Serial](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Luminosidade-Serial/Luminosidade-Serial.ino) para o Arduino
 
 ### Passo 2: Criação da Base de Dados e Tabela *MySQL*
 
