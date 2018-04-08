@@ -140,7 +140,7 @@ Caso mais de um dado precise ser lido, enviado e adicionado à Tabela *MySQL*, a
 	
 	1. O sketch utiliza a bilbioteca [DHT-sensor-library-master](https://github.com/adafruit/DHT-sensor-library), instale-a na IDE Arduino antes de tentar fazer Upload do código. 
 
-	2. Faça Upload do programa [Temp-Umid-Lum-Serial](www.google.com) para o Arduino.
+	2. Faça Upload do programa [Temp-Umid-Lum-Serial](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Temp-Umid-Lum-Serial/Temp-Umid-Lum-Serial.ino) para o Arduino.
 
 	3. Abra o "Monitor Serial" na própria IDE para confirmar a leitura dos dados e anote qual porta serial está sendo usada.
 
