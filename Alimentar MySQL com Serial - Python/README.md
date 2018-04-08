@@ -53,13 +53,35 @@ Para a demonstração deste projeto foi utilizado o seguinte login para o MySQL:
 
 * **Criação da Base de Dados:**
 
-Para a criação da base de dados:
+A primeira etapa é vizualizar quais os *databases* já estão criados, isto pode ser feito com o comando:
+
+	mysql> SHOW DATABASES;
+
+Algo como isto deve ter aparecido:
+
+	mysql> SHOW DATABASES;
+	+--------------------+
+	| Database           |
+	+--------------------+
+	| information_schema |
+	| mysql              |
+	| performance_schema |
+	| phpmyadmin         |
+	| sys                |
+	+--------------------+
+	5 rows in set (0,00 sec)
+
+Iremos agora criar a base de dados **Monitoramento**, usando o comando:
 
 	mysql> CREATE DATABASE Monitoramento;
 
-Para selecionar a base de dados criada:
+Se vizualizarmos novamente os *databases* criados, **Monitoramento** agora é um deles.
+
+Para selecionar a base de dados criada, deve-se fazer:
 
 	mysql> USE Monitoramento;
+
+Desta maneira, estamos utilizando a base de dados **Monitoramento** e começaremos a criação da tabela.
 
 * **Criação da Tabela:**
 
@@ -119,6 +141,16 @@ Para que se inicie a leitura, comunicação e alimentação dos sensores com o b
 
 	8	ser = serial.Serial('/dev/ttyACM0', 9600)
 
+Modifique a luminosidade do ambiente que se encontra o sensor enquanto o script Python estiver sendo executado. Pare a execução do script e verifique no MySQL, primeiro usando o banco de dados **Monitoramento**:
+
+	mysql> USE Monitoramento;
+	
+e depois vizualizando todas as linhas da tabela **ARDUINO_001**:
+		
+	mysql> SELECT * FROM ARDUINO_001;
+	
+Se tudo deu certo, o sensor foi lido, os dados enviados pela serial, recebidos no servidor e armazenados na tabela MySQL!
+Sendo assim, agora podemos fazer pequenas alterações para usarmos mais de um sensor.
 
 ## Procedimento para diversos Sensores simultaneamente
 
