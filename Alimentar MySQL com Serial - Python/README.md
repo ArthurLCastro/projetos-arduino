@@ -46,9 +46,9 @@ A maneira encontrada foi utilizar um código em Arduino para ler estes sensores 
 
 Para a demonstração deste projeto foi utilizado o seguinte login para o MySQL:
 
-* **Usuário:** root
-* **Senha:** root
+**Usuário:** root
 
+**Senha:** root
 
 * Criação da Base de Dados:
 
