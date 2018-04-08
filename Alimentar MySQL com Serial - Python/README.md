@@ -150,7 +150,7 @@ Caso mais de um dado precise ser lido, enviado e adicionado à Tabela *MySQL*, a
 
 * **Execução do script:**
 
-Conforme dito anteriormente, é necessário modificar a *linha 8* do script [Alimentar-MySQL-com-Serial-2.py](www.google.com) para a porta serial que o *Arduino* está conectado.
+Conforme dito anteriormente, é necessário modificar a *linha 8* do script [Alimentar-MySQL-com-Serial-2.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/%20Alimentar-MySQL-com-Serial-2.py) para a porta serial que o *Arduino* está conectado.
 
 	ser = serial.Serial('/dev/ttyACM0', 9600)
 
