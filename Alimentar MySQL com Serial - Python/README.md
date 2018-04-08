@@ -114,7 +114,7 @@ O mesmo serve para
 
 * **Execução do script:**
 
-Para que se inicie a leitura, comunicação e alimentação dos sensores com o banco de dados, é necessário modificar a *linha 8* do script [Alimentar-MySQL-com-Serial.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial.py) para a porta serial que o *Arduino* está conectado
+Para que se inicie a leitura, comunicação e alimentação dos sensores com o banco de dados, é necessário modificar a *linha 8* do script [Alimentar-MySQL-com-Serial.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial.py) para a porta serial que o *Arduino* está conectado e então executá-lo.
 
 	ser = serial.Serial('/dev/ttyACM0', 9600)
 
@@ -146,14 +146,16 @@ Caso mais de um dado precise ser lido, enviado e adicionado à Tabela *MySQL*, a
 
 ### Passo 2: Modificação da Tabela *MySQL*
 
+Para que os dados do sensor de temperatura e umidade sejam adicionados à tabela, precisamos executar o script [script_alter_table.sql](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/script_alter_table.sql) que adicionará duas novas colunas: **TEMPERATURA** e **LUMINOSIDADE**.
+
 ### Passo 3: Scripts em *Python*
 
 * **Execução do script:**
 
-Conforme dito anteriormente, é necessário modificar a *linha 8* do script [Alimentar-MySQL-com-Serial-2.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/%20Alimentar-MySQL-com-Serial-2.py) para a porta serial que o *Arduino* está conectado.
+Conforme dito anteriormente, é necessário modificar a *linha 8* do script [Alimentar-MySQL-com-Serial-2.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/%20Alimentar-MySQL-com-Serial-2.py) para a porta serial que o *Arduino* está conectado e então executá-lo.
 
 	ser = serial.Serial('/dev/ttyACM0', 9600)
-
+	
 ## Referências:
 [Arduino e Banco de Dados – Comunicação Serial](http://josecintra.com/blog/arduino-banco-dados-comunicacao-serial/)
 
