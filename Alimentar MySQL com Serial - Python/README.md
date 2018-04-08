@@ -121,7 +121,7 @@ Para que se inicie a leitura, comunicação e alimentação dos sensores com o b
 
 ## Procedimento para diversos Sensores simultaneamente
 
-Caso mais de um dado precise ser lido, enviado e adicionado à Tabela *MySQL*, algumas modificações precisam ser feitas, como o uso do *Split* no *Python* e a alteração da Tabela **ARDUINO_001** criada anteriormente. 
+Caso mais de um dado precise ser lido, enviado e adicionado à Tabela *MySQL*, algumas modificações precisam ser feitas, como o Hardware, programação do Arduino, alteração da Tabela **ARDUINO_001** e o uso do *Split* no *Python*. Para esta demonstração, utilizaremos o Sensor DHT22, que mede Temperatura e Umidade, além do LDR para a Luminosidade.
 
 ### Passo 1: Nova Montagem e Programação do *Arduino*
 
