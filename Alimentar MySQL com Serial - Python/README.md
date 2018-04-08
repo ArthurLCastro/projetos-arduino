@@ -181,6 +181,8 @@ Caso mais de um dado precise ser lido, enviado e adicionado à Tabela *MySQL*, a
 
 Para que os dados do sensor de temperatura e umidade sejam adicionados à tabela, precisamos executar o script [script_alter_table.sql](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/script_alter_table.sql) que adicionará a ela duas novas colunas: **TEMPERATURA** e **LUMINOSIDADE**.
 
+	mysql> SOURCE /local-em-que-o-script-esta-salvo/script_alter_table.sql;
+
 ### Passo 3: Scripts em *Python*
 
 * **Execução do script:**
