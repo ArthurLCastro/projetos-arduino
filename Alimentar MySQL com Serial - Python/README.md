@@ -76,7 +76,10 @@ Para verificar, podemos executar o comando:
 
 ### Passo 3: Scripts em *Python*
 
-Para que o Python leia a Serial e comunique-se com o MySQL, duas bibliotecas precisam ser instaladas: **pySerial** (usando o python pip) e **[MySQL - Connector/Python](https://dev.mysql.com/downloads/connector/python/)** (clicando no link)
+Para que o Python leia a Serial e comunique-se com o MySQL, duas bibliotecas precisam ser instaladas: **pySerial** (usando o python pip) e **[MySQL - Connector/Python](https://dev.mysql.com/downloads/connector/python/)** (clicando no link). Você pode testá-las separadamente utilizando estes códigos do [meu repositório Python](https://github.com/ArthurLCastro/Python):
+
+1. [Leitura da Porta Serial com Python](https://github.com/ArthurLCastro/Python/tree/master/Leitura%20da%20Porta%20Serial%20com%20Python)
+2. [Adição de dados em MySQL com Python](https://github.com/ArthurLCastro/Python/tree/master/Adi%C3%A7%C3%A3o%20de%20dados%20em%20MySQL%20com%20Python)
 
 * **Testes antes da execução do script:**
 
@@ -110,7 +113,7 @@ O mesmo serve para
 
 * **Execução do script:**
 
-Para que se inicie a leitura, comunicação e alimentação dos sensores com o banco de dados, é necessário modificar a linha 8 do script [Alimentar-MySQL-com-Serial.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial.py) para a porta serial que o arduino está conectado
+Para que se inicie a leitura, comunicação e alimentação dos sensores com o banco de dados, é necessário modificar a *linha 8* do script [Alimentar-MySQL-com-Serial.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial.py) para a porta serial que o *Arduino* está conectado
 
 	ser = serial.Serial('/dev/ttyACM0', 9600)
 
