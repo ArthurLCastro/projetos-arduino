@@ -6,7 +6,7 @@
 
 #define LUM_PIN A0
 #define tempo 500               //Tempo entre leituras (em ms)
-#define DHTPIN D3
+#define DHTPIN 8
 #define DHTTYPE DHT22
 
 String sinais;                  // Variável usada para enviar os sinais
