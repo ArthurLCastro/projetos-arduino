@@ -195,6 +195,8 @@ Conforme feito anteriormente com o script [Alimentar-MySQL-com-Serial.py](https:
 
 e então executá-lo.
 
+* **Split**
+
 Podemos observar o uso do **Split** na linha 17 do código Python
 		
 	17	luminosidade, temperatura, umidade = valores.split("|")
@@ -202,6 +204,14 @@ Podemos observar o uso do **Split** na linha 17 do código Python
 ele separa a *String* "valores" recebida em três variáveis diferentes: "luminosidade", "temperatura" e "umidade". Só depois as envia para as respectivas colunas da tabela *ARDUINO_001* na linha 23
 
 	23	query = ("INSERT INTO ARDUINO_001 (LUMINOSIDADE,TEMPERATURA,UMIDADE) VALUES (" + luminosidade + "," + temperatura + "," + umidade + ")")
+	
+Mais uma vez modifique, se possível, a luminosidade, temperatura e umidade próximos ao sensor enquanto o script Python estiver sendo executado. Pare a execução do script e verifique no MySQL, novamente usando o banco de dados **Monitoramento**:
+
+	mysql> USE Monitoramento;
+	
+e depois vizualizando todas as linhas da tabela **ARDUINO_001**:
+		
+	mysql> SELECT * FROM ARDUINO_001;
 
 ## Referências:
 [Arduino e Banco de Dados – Comunicação Serial](http://josecintra.com/blog/arduino-banco-dados-comunicacao-serial/)
