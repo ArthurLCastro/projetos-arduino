@@ -23,7 +23,7 @@ A maneira encontrada foi utilizar um código em Arduino para ler estes sensores 
 	3. Alimentação da Base de Dados
 	4. Uso do Split
 
-## Procedimentos:
+## Procedimento para apenas um Sensor:
 
 ### Passo 1: Montagem e Programação do *Arduino*
 
@@ -34,13 +34,13 @@ A maneira encontrada foi utilizar um código em Arduino para ler estes sensores 
 	4. Protoboard
 	5. Jumpers
 
-![Montagem do Hardware - Arduino e LDR](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Montagem%20do%20Hardware.png)
+![Montagem do Hardware - Arduino e LDR](www.google.com)
 
 * **Programação do Arduino**
 
-	1. Faça Upload do programa [Luminosidade-Serial](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Luminosidade-Serial/Luminosidade-Serial.ino) para o Arduino
+	1. Faça Upload do programa [Luminosidade-Serial](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Luminosidade-Serial/Luminosidade-Serial.ino) para o Arduino.
 
-	2. Abra o "Monitor Serial" na própria IDE para confirmar a leitura dos dados.
+	2. Abra o "Monitor Serial" na própria IDE para confirmar a leitura dos dados e anote qual porta serial está sendo usada.
 
 ### Passo 2: Criação da Base de Dados e Tabela *MySQL*
 
@@ -76,7 +76,8 @@ Para verificar, podemos executar o comando:
 
 ### Passo 3: Scripts em *Python*
 
-Para que o Python leia a Serial e comunique-se com o MySQL, duas bibliotecas precisam ser instaladas: **pySerial** (usando o python pip) e **[MySQL - Connector/Python](https://dev.mysql.com/downloads/connector/python/)** (clicando no link). Você pode testá-las separadamente utilizando estes códigos do [meu repositório Python](https://github.com/ArthurLCastro/Python):
+Para que o Python leia a Serial e comunique-se com o MySQL, duas bibliotecas precisam ser instaladas: **pySerial** (usando o python pip) e **[MySQL - Connector/Python](https://dev.mysql.com/downloads/connector/python/)** (clicando no link).
+Você pode testá-las separadamente utilizando estes códigos do [meu repositório Python](https://github.com/ArthurLCastro/Python):
 
 1. [Leitura da Porta Serial com Python](https://github.com/ArthurLCastro/Python/tree/master/Leitura%20da%20Porta%20Serial%20com%20Python)
 2. [Adição de dados em MySQL com Python](https://github.com/ArthurLCastro/Python/tree/master/Adi%C3%A7%C3%A3o%20de%20dados%20em%20MySQL%20com%20Python)
@@ -117,9 +118,41 @@ Para que se inicie a leitura, comunicação e alimentação dos sensores com o b
 
 	ser = serial.Serial('/dev/ttyACM0', 9600)
 
-### Passo 4: Efetuando o procedimento para diversos Sensores simultaneamente
 
+## Procedimento para diversos Sensores simultaneamente
 
+Caso mais de um dado precise ser lido, enviado e adicionado à Tabela *MySQL*, algumas modificações precisam ser feitas, como o uso do *Split* no *Python* e a alteração da Tabela **ARDUINO_001** criada anteriormente. 
+
+### Passo 1: Nova Montagem e Programação do *Arduino*
+
+* **Montagem do Hardware**
+	1. Arduino UNO
+	2. 1 Resistor de 10Kohms
+	2. 1 Resistor de 1Kohm
+	4. 1 LDR
+	5. 1 Sensor de Temperatura e Umidade - DHT22
+	6. Protoboard
+	7. Jumpers
+
+![Montagem do Hardware - Arduino, LDR e DHT22](www.google.com)
+
+* **Programação do Arduino**
+	
+	1. O sketch utiliza a bilbioteca [DHT-22](www.google.com), instale-a na IDE Arduino antes de tentar fazer Upload do código. 
+
+	2. Faça Upload do programa [Temp-Umid-Lum-Serial](www.google.com) para o Arduino.
+
+	3. Abra o "Monitor Serial" na própria IDE para confirmar a leitura dos dados e anote qual porta serial está sendo usada.
+
+### Passo 2: Modificação da Tabela *MySQL*
+
+### Passo 3: Scripts em *Python*
+
+* **Execução do script:**
+
+Conforme dito anteriormente, é necessário modificar a *linha 8* do script [Alimentar-MySQL-com-Serial-2.py](www.google.com) para a porta serial que o *Arduino* está conectado.
+
+	ser = serial.Serial('/dev/ttyACM0', 9600)
 
 ## Referências:
 [Arduino e Banco de Dados – Comunicação Serial](http://josecintra.com/blog/arduino-banco-dados-comunicacao-serial/)
