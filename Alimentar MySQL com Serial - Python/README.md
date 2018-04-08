@@ -27,7 +27,7 @@ A maneira encontrada foi utilizar um código em Arduino para ler estes sensores 
 
 ### Passo 1: Montagem e Programação do *Arduino*
 
-* Montagem do Hardware
+* **Montagem do Hardware**
 	1. Arduino UNO
 	2. 1 Resistor de 10Kohms
 	3. 1 LDR
@@ -36,7 +36,7 @@ A maneira encontrada foi utilizar um código em Arduino para ler estes sensores 
 
 ![Montagem do Hardware - Arduino e LDR](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Montagem%20do%20Hardware.png)
 
-* Programação do Arduino
+* **Programação do Arduino**
 
 	1. Faça Upload do programa [Luminosidade-Serial](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Luminosidade-Serial/Luminosidade-Serial.ino) para o Arduino
 
@@ -50,7 +50,7 @@ Para a demonstração deste projeto foi utilizado o seguinte login para o MySQL:
 
 **Senha:** root
 
-* Criação da Base de Dados:
+* **Criação da Base de Dados:**
 
 Para a criação da base de dados:
 
@@ -60,13 +60,13 @@ Para selecionar a base de dados criada:
 
 	mysql> USE Monitoramento;
 
-* Criação da Tabela:
+* **Criação da Tabela:**
 
 Para a criação da tabela pode-se digitar o comando diretamente no terminal ou executar o script [script_tabela.sql](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/script_tabela.sql)
 
 	mysql> SOURCE /local-em-que-o-script-esta-salvo/script_tabela.sql;
 
-* Verificação:
+* **Verificação:**
 
 Construímos então o **database** "Monitoramento" que contém uma **tabela** "ARDUINO_001" com três colunas: ID, TIMESTAMP e LUMINOSIDADE(%).
 
@@ -78,7 +78,7 @@ Para verificar, podemos executar o comando:
 
 Para que o Python leia a Serial e comunique-se com o MySQL, duas bibliotecas precisam ser instaladas: **pySerial** (usando o python pip) e **[MySQL - Connector/Python](https://dev.mysql.com/downloads/connector/python/)** (clicando no link)
 
-* Testes antes da execução do script
+* **Testes antes da execução do script:**
 
 Após instalar as bibliotecas pode-se testar no **Interpretador Python**
 
@@ -108,7 +108,7 @@ O mesmo serve para
 
 	>>> import mysql.connector
 
-* Execução do script:
+* **Execução do script:**
 
 Para que se inicie a leitura, comunicação e alimentação dos sensores com o banco de dados, é necessário modificar a linha 8 do script [Alimentar-MySQL-com-Serial.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial.py) para a porta serial que o arduino está conectado
 
