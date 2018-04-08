@@ -187,6 +187,16 @@ Para que os dados do sensor de temperatura e umidade sejam adicionados à tabela
 
 ### Passo 3: Scripts em *Python*
 
+* **Split**
+
+Podemos observar o uso do **Split** na *linha 17* do código Python [Alimentar-MySQL-com-Serial-2.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/%20Alimentar-MySQL-com-Serial-2.py)
+		
+	17	luminosidade, temperatura, umidade = valores.split("|")
+
+ele separa a *String* "valores" recebida em três variáveis diferentes: "luminosidade", "temperatura" e "umidade". Só depois as envia para as respectivas colunas da tabela *ARDUINO_001* na linha 23
+
+	23	query = ("INSERT INTO ARDUINO_001 (LUMINOSIDADE,TEMPERATURA,UMIDADE) VALUES (" + luminosidade + "," + temperatura + "," + umidade + ")")
+
 * **Execução do script:**
 
 Conforme feito anteriormente com o script [Alimentar-MySQL-com-Serial.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial.py), é também necessário modificar a *linha 8* do script [Alimentar-MySQL-com-Serial-2.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/%20Alimentar-MySQL-com-Serial-2.py) para a porta serial que o *Arduino* está conectado:
@@ -195,16 +205,6 @@ Conforme feito anteriormente com o script [Alimentar-MySQL-com-Serial.py](https:
 
 e então executá-lo.
 
-* **Split**
-
-Podemos observar o uso do **Split** na linha 17 do código Python
-		
-	17	luminosidade, temperatura, umidade = valores.split("|")
-
-ele separa a *String* "valores" recebida em três variáveis diferentes: "luminosidade", "temperatura" e "umidade". Só depois as envia para as respectivas colunas da tabela *ARDUINO_001* na linha 23
-
-	23	query = ("INSERT INTO ARDUINO_001 (LUMINOSIDADE,TEMPERATURA,UMIDADE) VALUES (" + luminosidade + "," + temperatura + "," + umidade + ")")
-	
 Mais uma vez modifique, se possível, a luminosidade, temperatura e umidade próximos ao sensor enquanto o script Python estiver sendo executado. Pare a execução do script e verifique no MySQL, novamente usando o banco de dados **Monitoramento**:
 
 	mysql> USE Monitoramento;
