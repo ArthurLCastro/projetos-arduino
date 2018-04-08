@@ -34,7 +34,7 @@ A maneira encontrada foi utilizar um código em Arduino para ler estes sensores 
 	4. Protoboard
 	5. Jumpers
 
-![Montagem do Hardware - Arduino e LDR](www.google.com)
+![Montagem do Hardware - Arduino e LDR](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Hardware1.png)
 
 * **Programação do Arduino**
 
@@ -134,7 +134,7 @@ Caso mais de um dado precise ser lido, enviado e adicionado à Tabela *MySQL*, a
 	6. Protoboard
 	7. Jumpers
 
-![Montagem do Hardware - Arduino, LDR e DHT22](www.google.com)
+![Montagem do Hardware - Arduino, LDR e DHT22](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Hardware2.png)
 
 * **Programação do Arduino**
 	
