@@ -137,9 +137,11 @@ O mesmo serve para
 
 * **Execução do script:**
 
-Para que se inicie a leitura, comunicação e alimentação dos sensores com o banco de dados, é necessário modificar a *linha 8* do script [Alimentar-MySQL-com-Serial.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial.py) para a porta serial que o *Arduino* está conectado e então executá-lo.
+Para que se inicie a leitura, comunicação e alimentação dos sensores com o banco de dados, é necessário modificar a *linha 8* do script [Alimentar-MySQL-com-Serial.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial.py) para a porta serial que o *Arduino* está conectado:
 
 	8	ser = serial.Serial('/dev/ttyACM0', 9600)
+
+e então executá-lo.
 
 Modifique a luminosidade do ambiente que se encontra o sensor enquanto o script Python estiver sendo executado. Pare a execução do script e verifique no MySQL, primeiro usando o banco de dados **Monitoramento**:
 
@@ -187,9 +189,11 @@ Para que os dados do sensor de temperatura e umidade sejam adicionados à tabela
 
 * **Execução do script:**
 
-Conforme foi feito anteriormente com o script [Alimentar-MySQL-com-Serial.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial.py), é, também, necessário modificar a *linha 8* do script [Alimentar-MySQL-com-Serial-2.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/%20Alimentar-MySQL-com-Serial-2.py) para a porta serial que o *Arduino* está conectado e então executá-lo.
+Conforme feito anteriormente com o script [Alimentar-MySQL-com-Serial.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial.py), é, também, necessário modificar a *linha 8* do script [Alimentar-MySQL-com-Serial-2.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/%20Alimentar-MySQL-com-Serial-2.py) para a porta serial que o *Arduino* está conectado:
 
 	8	ser = serial.Serial('/dev/ttyACM0', 9600)
+
+e então executá-lo.
 
 Podemos observar o uso do **Split** na linha 17 do código Python
 		
