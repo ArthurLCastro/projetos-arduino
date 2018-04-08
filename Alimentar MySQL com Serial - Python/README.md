@@ -17,7 +17,6 @@ A maneira encontrada foi utilizar um código em Arduino para ler estes sensores 
 * Manipulação de dados - MySQL
 	1. Criação de bases de dados (Database)
 	2. Criação de tabelas
-	3. Adição de dados
 * Python
 	1. Instalação de Bibliotecas
 	2. Leitura da Porta Serial
@@ -29,41 +28,43 @@ A maneira encontrada foi utilizar um código em Arduino para ler estes sensores 
 ### Passo 1: Montagem e Programação do *Arduino*
 
 * Montagem do Hardware
-1. Arduino UNO
-2. 1 Resistor de 10Kohms
-3. 1 LDR
-4. Protoboard
-5. Jumpers
+	1. Arduino UNO
+	2. 1 Resistor de 10Kohms
+	3. 1 LDR
+	4. Protoboard
+	5. Jumpers
 
 ![Montagem do Hardware - Arduino e LDR](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Montagem%20do%20Hardware.png)
 
 * Programação do Arduino
 
-1. Faça Upload do programa [Luminosidade-Serial](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Luminosidade-Serial/Luminosidade-Serial.ino) para o Arduino
+	1. Faça Upload do programa [Luminosidade-Serial](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Luminosidade-Serial/Luminosidade-Serial.ino) para o Arduino
 
-2. Abra o "Monitor Serial" na própria IDE para confirmar a leitura dos dados.
+	2. Abra o "Monitor Serial" na própria IDE para confirmar a leitura dos dados.
 
 ### Passo 2: Criação da Base de Dados e Tabela *MySQL*
 
 Para a demonstração deste projeto foi utilizado o seguinte login para o MySQL:
-**Usuário:** root
-**Senha:** root
+
+* **Usuário:** root
+* **Senha:** root
+
 
 * Criação da Base de Dados:
 
 Para a criação da base de dados:
 
-`mysql> CREATE DATABASE Monitoramento;`
+	`mysql> CREATE DATABASE Monitoramento;`
 
 Para selecionar a base de dados criada:
 
-`mysql> USE Monitoramento;`
+	`mysql> USE Monitoramento;`
 
 * Criação da Tabela:
 
 Para a criação da tabela pode-se digitar o comando diretamente no terminal ou executar o script [script_tabela.sql](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/script_tabela.sql)
 
-`mysql> SOURCE /local-em-que-o-script-esta-salvo/script_tabela.sql;`
+	`mysql> SOURCE /local-em-que-o-script-esta-salvo/script_tabela.sql;`
 
 * Verificação:
 
@@ -71,7 +72,7 @@ Construímos então o **database** "Monitoramento" que contém uma **tabela** "A
 
 Para verificar, podemos executar o comando:
 
-`mysql> DESC ARDUINO_001;`
+	`mysql> DESC ARDUINO_001;`
 
 ### Passo 3: Scripts em *Python*
 
@@ -81,37 +82,37 @@ Para que o Python leia a Serial e comunique-se com o MySQL, duas bibliotecas pre
 
 Após instalar as bibliotecas pode-se testar no **Interpretador Python**
 
-`Python 2.7.12 (default, Dec  4 2017, 14:50:18) 
-[GCC 5.4.0 20160609] on linux2
-Type "help", "copyright", "credits" or "license" for more information.
->>>`
+	`Python 2.7.12 (default, Dec  4 2017, 14:50:18) 
+	[GCC 5.4.0 20160609] on linux2
+	Type "help", "copyright", "credits" or "license" for more information.
+	>>>`
 
 executando, por exemplo:
 
-`>>> import serial`
+	`>>> import serial`
 
 se aparecer
 
-`>>> import serial
->>>`
+	`>>> import serial
+	>>>`
 
 tudo deve estar funcionando bem, mas caso apareça algum erro como:
 
-`>>> import serial
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-ImportError: No module named serial
-`
+	`>>> import serial
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	ImportError: No module named serial`
+	
 seria melhor reinstalar a biblioteca.
 O mesmo serve para
 
-`>>> import mysql.connector`
+	`>>> import mysql.connector`
 
 * Execução do script:
 
 Para que se inicie a leitura, comunicação e alimentação dos sensores com o banco de dados, é necessário modificar a linha 8 do script [Alimentar-MySQL-com-Serial.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial.py) para a porta serial que o arduino está conectado
 
-`ser = serial.Serial('/dev/ttyACM0', 9600) `
+	`ser = serial.Serial('/dev/ttyACM0', 9600) `
 
 ### Efetuando o procedimento para diversos Sensores simultaneamente
 
