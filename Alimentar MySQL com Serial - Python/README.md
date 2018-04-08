@@ -17,6 +17,7 @@ A maneira encontrada foi utilizar um código em Arduino para ler estes sensores 
 * Manipulação de dados - MySQL
 	1. Criação de bases de dados (Database)
 	2. Criação de tabelas
+	3. Alteração de tabelas (inclusão de novas colunas)
 * Python
 	1. Instalação de Bibliotecas
 	2. Leitura da Porta Serial
