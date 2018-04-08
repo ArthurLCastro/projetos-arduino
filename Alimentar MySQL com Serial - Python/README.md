@@ -127,8 +127,8 @@ Caso mais de um dado precise ser lido, enviado e adicionado à Tabela *MySQL*, a
 
 * **Montagem do Hardware**
 	1. Arduino UNO
-	2. 1 Resistor de 10Kohms
-	2. 1 Resistor de 1Kohm
+	2. 1 Resistor de 10Kohms (Para o LDR)
+	2. 1 Resistor de 1Kohm (Para o DHT22)
 	4. 1 LDR
 	5. 1 Sensor de Temperatura e Umidade - DHT22
 	6. Protoboard
@@ -138,7 +138,7 @@ Caso mais de um dado precise ser lido, enviado e adicionado à Tabela *MySQL*, a
 
 * **Programação do Arduino**
 	
-	1. O sketch utiliza a bilbioteca [DHT-22](www.google.com), instale-a na IDE Arduino antes de tentar fazer Upload do código. 
+	1. O sketch utiliza a bilbioteca [DHT-sensor-library-master](https://github.com/adafruit/DHT-sensor-library), instale-a na IDE Arduino antes de tentar fazer Upload do código. 
 
 	2. Faça Upload do programa [Temp-Umid-Lum-Serial](www.google.com) para o Arduino.
 
