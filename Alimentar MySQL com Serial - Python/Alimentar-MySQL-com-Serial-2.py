@@ -14,7 +14,7 @@ conn = mysql.connector.connect(
 
 while 1:
 	valores = ser.readline()
-	luminosidade, temperatura, umidade = valores.split("|")
+	luminosidade,temperatura,umidade = valores.split("|")
 	print("luminosidade: " + luminosidade)
 	print("Temperatura: " + temperatura)
 	print("Umidade: " + umidade)
