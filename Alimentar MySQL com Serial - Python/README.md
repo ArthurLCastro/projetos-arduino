@@ -212,6 +212,16 @@ e depois vizualizando todas as linhas da tabela **ARDUINO_001**:
 		
 	mysql> SELECT * FROM ARDUINO_001;
 
+## Fotografias:
+
+### Arduino e LDR
+
+<img src="https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Arduino-e-LDR.jpg" width="70%">
+
+### Arduino, LDR e DHT22
+
+<img src="https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Arduino-LDR-e-DHT22.jpg" width="70%">
+
 ## Referências:
 [Arduino e Banco de Dados – Comunicação Serial](http://josecintra.com/blog/arduino-banco-dados-comunicacao-serial/)
 
