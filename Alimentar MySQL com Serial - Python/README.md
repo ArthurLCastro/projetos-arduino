@@ -188,7 +188,7 @@ Para que os dados do sensor de temperatura e umidade sejam adicionados à tabela
 
 * **Split**
 
-Podemos observar o uso do **Split** na *linha 17* do código Python [Alimentar-MySQL-com-Serial-2.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/%20Alimentar-MySQL-com-Serial-2.py)
+Podemos observar o uso do **Split** na *linha 17* do código Python [Alimentar-MySQL-com-Serial-2.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial-2.py)
 		
 	17	luminosidade, temperatura, umidade = valores.split("|")
 
@@ -198,7 +198,7 @@ ele separa a *String* "valores" recebida em três variáveis diferentes: "lumino
 
 * **Execução do script:**
 
-Conforme feito anteriormente com o script [Alimentar-MySQL-com-Serial.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial.py), é também necessário modificar a *linha 8* do script [Alimentar-MySQL-com-Serial-2.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/%20Alimentar-MySQL-com-Serial-2.py) para a porta serial que o *Arduino* está conectado:
+Conforme feito anteriormente com o script [Alimentar-MySQL-com-Serial.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial.py), é também necessário modificar a *linha 8* do script [Alimentar-MySQL-com-Serial-2.py](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Alimentar-MySQL-com-Serial-2.py) para a porta serial que o *Arduino* está conectado:
 
 	8	ser = serial.Serial('/dev/ttyACM0', 9600)
 
