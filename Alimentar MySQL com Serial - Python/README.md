@@ -162,12 +162,11 @@ Caso mais de um dado precise ser lido, enviado e adicionado à Tabela *MySQL*, a
 
 * **Montagem do Hardware**
 	1. Arduino UNO
-	2. 1 Resistor de 10Kohms (Para o LDR)
-	2. 1 Resistor de 1Kohm (Para o DHT22)
-	4. 1 LDR
-	5. 1 Sensor de Temperatura e Umidade - DHT22
-	6. Protoboard
-	7. Jumpers
+	2. 2 Resistores de 10Kohms
+	3. 1 LDR
+	4. 1 Sensor de Temperatura e Umidade - DHT22
+	5. Protoboard
+	6. Jumpers
 
 ![Montagem do Hardware - Arduino, LDR e DHT22](https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Hardware2.png)
 
